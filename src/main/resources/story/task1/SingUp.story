@@ -6,7 +6,6 @@ Examples:
 
 Scenario: Sing Up
 Meta: @layout desktop
-	  @testID ovr  
 Given I am on the main application page
 When I click on element located `By.xpath(//div[@class='float-right buttons']/../..//a[@href='/signup'])`
 Then the page with the URL 'https://trello.com/signup' is loaded
@@ -18,6 +17,10 @@ When I enter `#{generate(regexify '[a-z]{3}[A-Z]{2}[1-9]{3}[!@#$%^&*?]{2}')}` in
 When I click on element located `By.xpath(//input[@id='displayName'])`
 When I enter `<displayName>` in field located `By.xpath(//input[@id='displayName'])`
 When I click on element located `By.xpath(//button[@id='signup-submit']/../..//span[@class='css-t5emrf'])`
+
+Scenario: After captcha (skip)
+Meta: @skip
+	  @layout desktop
 Then the text 'Welcome, <displayName>' exists
 When I click on element located `By.xpath(//input[@id='moonshotCreateTeam'])`
 When I enter `OVR` in field located `By.xpath(//input[@id='moonshotCreateTeam'])`

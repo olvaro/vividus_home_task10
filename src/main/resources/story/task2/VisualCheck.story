@@ -20,7 +20,7 @@ Scenario: Verify 2 Created Board
 When I click on element located `By.xpath(//span[@class='_3qwe2tMMFonNvf _2P-NazJFBDpMac']/../..//span[text()='Boards'])`
 When I wait until element located `By.xpath(//h3[text()='Your Team Boards'])` appears
 When I click on element located `By.xpath(//div[@title='ManualBoard'])`
-When I wait until element located `By.xpath(//div[@id='trello-root'])` appears
+When I wait until element located `By.xpath(//span[text()='Butler'])` appears
 When I COMPARE_AGAINST baseline with `created_board`
 
 Scenario: Verify 3 Members
